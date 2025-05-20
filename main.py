@@ -18,10 +18,7 @@ def get_related_image(query):
     return None
 
 def get_summary_gemini(text):
-    prompt = f"Summarize this football news in 50 words, urgent tone, perfect for YouTube Shorts narration:"
-
-
-{text}"
+    prompt = f"Summarize this football news in 50 words, urgent tone, perfect for YouTube Shorts narration:\n{text}"
     headers = {"Authorization": f"Bearer {GEMINI_API_KEY}"}
     json_data = {
         "contents": [{"parts": [{"text": prompt}]}]
